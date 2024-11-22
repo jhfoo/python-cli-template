@@ -1,0 +1,3 @@
+echo "- Building"
+./venv/bin/python3 -m build 
+
