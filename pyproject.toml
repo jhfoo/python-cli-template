@@ -22,7 +22,7 @@ classifiers = [
 ]
 
 [project.scripts]
-package-cli = "package_name.cli:cli"
+package-cli = "package_name:cli"
 
 
 [project.urls]

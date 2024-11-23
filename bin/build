@@ -1,6 +1,18 @@
+#!/usr/local/bin/zsh
+
 APP_ROOT=`dirname $0`
 cd $APP_ROOT/..
 
 echo "- Building"
 ./venv/bin/python3 -m build 
 
+if [[ "$1" == "-y" ]]; then
+  REPLY="y"
+else
+  read -q "REPLY?Install to venv/? y/N"
+  echo ""
+fi
+
+if [[ "$REPLY" == "y" ]]; then
+  ./bin/install-venv
+fi
